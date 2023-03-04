@@ -30,6 +30,12 @@ gem "jbuilder"
 
 gem 'rack-cors'
 
+
+# コンソール出力結果を表にする Doc: https://github.com/cldwalker/hirb
+gem 'hirb', '~> 0.7.3'
+# コンソール文字列補正 Doc: https://github.com/steakknife/hirb-unicode
+gem 'hirb-unicode-steakknife', '~> 0.0.9'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

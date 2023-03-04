@@ -1,5 +1,10 @@
 FROM ruby:3.1
 
+
+# Set timezone
+ENV TZ=Asia/Tokyo
+
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs default-mysql-client
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
@@ -16,7 +21,8 @@ COPY . /myapp
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 3000
+EXPOSE 5000
+# EXPOSE 3000
 
 # Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]

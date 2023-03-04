@@ -16,7 +16,11 @@ module Myapp
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = ENV["TZ"]
     # config.eager_load_paths << Rails.root.join("extras")
+    config.api_only = true
+
+    # データベースの読み書きに使用するタイムゾーン(:local | :utc(default))
+    config.active_record.default_timezone = :utc
   end
 end
