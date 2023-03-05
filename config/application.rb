@@ -22,5 +22,7 @@ module Myapp
 
     # データベースの読み書きに使用するタイムゾーン(:local | :utc(default))
     config.active_record.default_timezone = :utc
+    
+    config.i18n.default_locale = :ja
   end
 end
