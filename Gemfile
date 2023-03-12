@@ -30,6 +30,8 @@ gem "jbuilder"
 
 gem 'rack-cors'
 
+gem 'jwt', '~> 2.2'
+
 
 # コンソール出力結果を表にする Doc: https://github.com/cldwalker/hirb
 gem 'hirb', '~> 0.7.3'
