@@ -3,7 +3,7 @@ require "test_helper"
 
 class AccessTokenTest < ActionDispatch::IntegrationTest
   def setup
-    @user = active_user
+    @user = User.create(name: "John Doe", email: "john.doe@example.com", active: true)
     @encode = UserAuth::AccessToken.new(user_id: @user.id)
     @lifetime = UserAuth.access_token_lifetime
   end
