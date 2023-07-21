@@ -2,7 +2,7 @@ require "validator/email_validator"
 class User < ApplicationRecord
 
 #   token生成モジュール
-  include TokenGenerateService
+  # include TokenGenerateService
 
   before_validation :downcase_email
     # gem bcrypt

@@ -5,7 +5,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: root
-      API_DOMAIN: "localhost:3009"
+      API_DOMAIN: "localhost:3000"
     ports:
       - "3306:3306"
     volumes:
@@ -16,8 +16,8 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 5000 -b '0.0.0.0'"
     # command: bundle exec rails server -p 5000 -b '0.0.0.0'
     environment:
-      API_DOMAIN: "localhost:3009"
-      BASE_URL: "http://localhost:3009"
+      API_DOMAIN: "localhost:3000"
+      BASE_URL: "http://localhost:3000"
     volumes:
       - .:/myapp
     ports:
